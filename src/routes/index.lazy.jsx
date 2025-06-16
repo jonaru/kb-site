@@ -7,10 +7,6 @@ export const Route = createLazyFileRoute("/")({
 function Index() {
   return (
     <div className="index">
-      <div className="index-brand">
-        <h1>Klassiska bad</h1>
-        <p>Klassiska badrumsartiklar</p>
-      </div>
       <section className="hero">
         <h2 className="hero-heading">Tidlös elegans</h2>
         <p className="hero-text">

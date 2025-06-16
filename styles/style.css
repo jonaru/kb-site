@@ -1,0 +1,71 @@
+
+:root {
+    --primary-color: #F7F7F7;
+    --primary-color-hot: #FFFFFF;
+    --secondary-color: #080808;
+    --accent-color: #A0834E;
+    --accent-color-hot: #BD9F69;
+}
+* {
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.header-brand {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-brand p {
+    font-size: 0.8rem;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.hero {
+    padding: 200px;
+    background-image: url("/img/taps.jpg");
+    height: 1000px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--secondary-color);
+    font-size: 200%;
+}
+
+.section {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer ul {
+    display: flex;
+    flex-flow: row wrap;
+    list-style-type: none;
+    justify-content: center;
+    gap: 2rem;
+}
+
