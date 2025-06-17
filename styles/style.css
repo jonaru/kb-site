@@ -63,6 +63,23 @@ body {
     align-items: center;
 }
 
+.article-section {
+    padding: 3rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.article-item img {
+    height: 400px;
+    
+}
+.article-item img:hover {
+    border: 2px solid var(--secondary-color);
+}
+
 .about h2 {
     margin-bottom: 1.5rem;
 }

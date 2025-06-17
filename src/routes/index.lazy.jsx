@@ -1,4 +1,5 @@
 import { createLazyFileRoute, Link } from "@tanstack/react-router";
+import Article from "../Article";
 import aboutImage from "/img/castle.jpg";
 
 export const Route = createLazyFileRoute("/")({
@@ -15,6 +16,24 @@ function Index() {
           badrumsarmaturer, noggrant tillverkade enligt högsta standard av lyx
           och elegans.
         </p>
+      </section>
+      <section className="article-section">
+        <Article
+          fileName="basin-locky.jpg"
+          description="The Locky single vanity basin"
+        />
+        <Article
+          fileName="shower-spital.jpg"
+          description="The Spital free standing shower"
+        />
+        <Article
+          fileName="bath-hammered-copper.jpg"
+          description="Hammered copper bath tub"
+        />
+        <Article
+          fileName="wc-low.jpg"
+          description="The Eden low level WC suite"
+        />
       </section>
       <section className="section about">
         <h2>Om oss</h2>
