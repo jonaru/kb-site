@@ -22,6 +22,12 @@ html {
     color: var(--secondary-color);
 }
 
+.sorts-mill-goudy {
+    font-family: "Sorts Mill Goudy", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .header-brand {
     padding: 2rem;
     display: flex;
@@ -41,6 +47,7 @@ body {
 
 .hero {
     padding: 200px;
+    margin-bottom: 1rem;
     background-image: url("/img/taps.jpg");
     height: 1000px;
     background-size: cover;
