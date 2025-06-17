@@ -65,14 +65,14 @@ body {
 
 .article-section {
     padding: 3rem;
-    padding-left: 15rem;
-    padding-right: 15rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .article-item img {
+    margin: 0 4rem 0 4rem;
     height: 400px;
     
 }
