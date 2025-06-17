@@ -8,10 +8,10 @@ function Index() {
   return (
     <div className="index">
       <section className="hero">
-        <h2 className="hero-heading">Tidlös elegans</h2>
+        <h2 className="hero-heading"></h2>
         <p className="hero-text">
-          Upptäck vår utsökta kollektion av viktorianska och edwardianska
-          badrumsarmaturer, noggrant tillverkade enligt högsta standard av lyx
+          Upptäck vår kollektion av viktorianska och edwardianska
+          badrumsarmaturer, noggrant tillverkade enligt högsta standard med lyx
           och elegans.
         </p>
       </section>

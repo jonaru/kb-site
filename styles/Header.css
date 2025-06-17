@@ -1,0 +1,14 @@
+@import "./style.css";
+
+.header-brand {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-secondary);
+}
+
+.header-brand p {
+    font-size: 0.8rem;
+}

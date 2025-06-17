@@ -2,9 +2,13 @@
 :root {
     --primary-color: #F7F7F7;
     --primary-color-hot: #FFFFFF;
+    --hero-text-color: #F7F7F7;
     --secondary-color: #080808;
     --accent-color: #A0834E;
     --accent-color-hot: #BD9F69;
+
+    --font-primary: "Sorts Mill Goudy", serif;
+    --font-secondary: "Cinzel", serif;
 }
 * {
     margin: 0;
@@ -20,24 +24,11 @@ html {
     box-sizing: border-box;
     background-color: var(--primary-color);
     color: var(--secondary-color);
+    font-family: var(--font-primary);
 }
 
-.sorts-mill-goudy {
-    font-family: "Sorts Mill Goudy", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.header-brand {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.header-brand p {
-    font-size: 0.8rem;
+h2 {
+    font-family: var(--font-secondary);
 }
 
 body {
@@ -46,18 +37,22 @@ body {
 }
 
 .hero {
-    padding: 200px;
+    padding: 150px;
     margin-bottom: 1rem;
     background-image: url("/img/taps.jpg");
-    height: 1000px;
+    height: 1150px;
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    color: var(--secondary-color);
+    color: var(--hero-text-color);
     font-size: 200%;
+}
+
+.hero-heading {
+    text-align: center;
 }
 
 .section {
@@ -66,13 +61,5 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.footer ul {
-    display: flex;
-    flex-flow: row wrap;
-    list-style-type: none;
-    justify-content: center;
-    gap: 2rem;
 }
 
