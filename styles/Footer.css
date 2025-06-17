@@ -1,6 +1,7 @@
 @import './style.css';
 
 .footer ul {
+    margin-top: 3rem;
     display: flex;
     flex-flow: row wrap;
     list-style-type: none;
