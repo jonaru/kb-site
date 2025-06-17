@@ -67,14 +67,17 @@ body {
     padding: 3rem;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
 }
 
 .article-item img {
     margin: 0 4rem 0 4rem;
     height: 400px;
-    
+}
+@media (max-width: 2100px) {
+    .article-item img {
+        margin: 0 2rem 2rem 2rem;
+    }
 }
 .article-item img:hover {
     border: 2px solid var(--secondary-color);
