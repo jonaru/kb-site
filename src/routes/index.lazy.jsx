@@ -1,4 +1,5 @@
 import { createLazyFileRoute, Link } from "@tanstack/react-router";
+import aboutImage from "/img/castle.jpg";
 
 export const Route = createLazyFileRoute("/")({
   component: Index,
@@ -20,7 +21,7 @@ function Index() {
         <div className="about-content">
           <img
             className="about-img"
-            src="./img/castle.jpg"
+            src={aboutImage}
             alt="Picture of a castle"
           />
           <p>
