@@ -1,0 +1,51 @@
+@import './style.css';
+
+.article-item {
+    margin: 0 4rem 0 4rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 400px;
+    width: auto;
+}
+
+.article-text-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    color: var(--primary-color);
+    transition: opacity 0.4s;
+}
+.article-text-wrapper:hover {
+    opacity: 1;
+    border: 2px solid var(--secondary-color);
+}
+
+.article-image-text {
+    padding-top: 50px;
+    font-weight: bold;
+}
+
+.article-item img {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+@media (max-width: 2100px) {
+    .article-item {
+        margin: 0 2rem 1rem 2rem;
+    }
+}
+@media (max-width: 1750px) {
+    .article-item {
+        margin: 0 1rem 1rem 1rem;
+    }
+}
