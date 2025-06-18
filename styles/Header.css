@@ -20,3 +20,8 @@ nav {
 .header-brand p {
     font-size: 0.8rem;
 }
+
+.header-link {
+    text-decoration: none;
+    color: inherit;
+}

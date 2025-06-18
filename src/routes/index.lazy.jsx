@@ -20,11 +20,12 @@ function Index() {
       </section>
 
       <section className="article-section">
-        {getProducts().map((product, index) => (
+        {getProducts().map((product) => (
           <Article
-            key={index}
+            key={product.id}
             fileName={product.fileName}
             description={product.name}
+            productId={product.id}
           />
         ))}
       </section>
