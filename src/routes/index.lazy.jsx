@@ -1,6 +1,7 @@
 import { createLazyFileRoute, Link } from "@tanstack/react-router";
 import Article from "../Article";
 import aboutImage from "/img/castle.jpg";
+import { getProducts } from "../data/product";
 
 export const Route = createLazyFileRoute("/")({
   component: Index,
@@ -17,24 +18,17 @@ function Index() {
           och elegans.
         </p>
       </section>
+
       <section className="article-section">
-        <Article
-          fileName="basin-locky.jpg"
-          description="The Locky single vanity basin"
-        />
-        <Article
-          fileName="shower-spital.jpg"
-          description="The Spital free standing shower"
-        />
-        <Article
-          fileName="bath-hammered-copper.jpg"
-          description="Hammered copper bath tub"
-        />
-        <Article
-          fileName="wc-low.jpg"
-          description="The Eden low level WC suite"
-        />
+        {getProducts().map((product, index) => (
+          <Article
+            key={index}
+            fileName={product.fileName}
+            description={product.name}
+          />
+        ))}
       </section>
+
       <section className="section about">
         <h2>Om oss</h2>
         <div className="about-content">

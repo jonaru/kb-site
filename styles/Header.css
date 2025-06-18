@@ -1,12 +1,15 @@
 @import "./style.css";
 
-.header-brand {
+nav {
     padding: 2rem;
     position: sticky;
     z-index: 100;
     top: 0;
     background-color: var(--primary-color);
     width: 100%;
+}
+
+.header-brand {
     display: flex;
     flex-direction: column;
     justify-content: center;
