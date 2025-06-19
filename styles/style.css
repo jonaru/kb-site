@@ -98,7 +98,7 @@ body {
     .hero {
         padding: 30px;
         height: 200px;
-        font-size: normal;
+        font-size: 10px;
     }
     .article-section {
         padding: 0;
