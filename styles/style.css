@@ -50,12 +50,6 @@ body {
     color: var(--hero-text-color);
     font-size: 200%;
 }
-@media (max-width: 768px) {
-    .hero {
-        padding: 30px;
-        height: 200px;
-    }
-}
 
 .hero-text {
     text-align: center;
@@ -99,5 +93,19 @@ body {
     grid-column: 2;
     justify-self: center;
     align-self: center;
+}
+@media (max-width: 768px) {
+    .hero {
+        padding: 30px;
+        height: 200px;
+        font-size: normal;
+    }
+    .article-section {
+        padding: 0;
+    }
+    .about-content {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
 }
 
