@@ -36,9 +36,10 @@
         padding: 2rem;
         display: grid;
         grid-template-areas:
-            "image image" 
-            "description features";
-        grid-template-columns: 1fr 1fr;
+            "image" 
+            "description"
+            "features";
+        grid-template-columns: 1fr;
         column-gap: 10px;
     }
 
