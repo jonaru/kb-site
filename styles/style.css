@@ -100,12 +100,17 @@ body {
         height: 400px;
         font-size: 20px;
     }
+    .section {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
     .article-section {
         padding: 0;
     }
     .about-content {
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 0;
+        margin-right: 0;
         display: flex;
         justify-content: center;
     }

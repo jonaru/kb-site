@@ -31,3 +31,19 @@
     grid-area: features;
 }
 
+@media (max-width: 768px) {
+    .product {
+        padding: 2rem;
+        display: grid;
+        grid-template-areas:
+            "image image" 
+            "description features";
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+    }
+
+    .product-image img {
+        width: 50%;
+    }
+}
+
