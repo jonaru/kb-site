@@ -43,8 +43,8 @@
     }
 
     .product-image {
-        display: flex;
-        justify-content: center;
+        display: grid;
+        place-items: center;
     }
 
     .product-image img {
@@ -52,7 +52,7 @@
     }
 
     .product-description {
-        padding-right: 0.5rem;
+        padding-right: 0;
     }
 }
 
