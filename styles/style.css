@@ -37,10 +37,10 @@ body {
 }
 
 .hero {
-    padding: 150px;
+    padding: 120px;
     margin-bottom: 1rem;
     background-image: url("/img/taps.jpg");
-    height: 1150px;
+    height: 800px;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -50,8 +50,14 @@ body {
     color: var(--hero-text-color);
     font-size: 200%;
 }
+@media (max-width: 768px) {
+    .hero {
+        padding: 30px;
+        height: 200px;
+    }
+}
 
-.hero-heading {
+.hero-text {
     text-align: center;
 }
 
