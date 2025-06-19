@@ -52,5 +52,6 @@
 @media (max-width: 768px) {
     .article-item {
         height: 100px;
+        width: auto;
     }
 }
