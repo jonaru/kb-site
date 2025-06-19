@@ -1,3 +1,4 @@
+import "../../styles/product.css";
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { useSelectedProduct } from "../contexts";
 import { useEffect } from "react";
@@ -22,9 +23,16 @@ function Product() {
 
   return (
     <section className="product">
-      <h2 className="product-heading"></h2>
-      <img src={getImageURL(product.fileName)} alt={product.name} />
-      <p className="product-description">{product.description}</p>
+      <div className="product-description">
+        <h2 className="product-heading">{product.name}</h2>
+        <p className="product-description-text">{product.description}</p>
+      </div>
+      <div className="product-image">
+        <img src={getImageURL(product.fileName)} alt={product.name} />
+      </div>
+      <div className="product-features">
+        <h3>Product Features</h3>
+      </div>
     </section>
   );
 }

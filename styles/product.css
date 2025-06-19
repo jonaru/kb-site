@@ -1,0 +1,33 @@
+@import "./style.css";
+
+.product {
+    padding: 2rem;
+    display: grid;
+    grid-template-areas: 
+        "description image . features";
+    grid-template-columns: 1fr 1fr 0.2fr 1fr;
+    column-gap: 10px;
+}
+
+.product-description {
+    grid-area: description;
+    padding-right: 3rem;
+    white-space: pre-line;
+}
+
+.product-heading {
+    margin-bottom: 1rem;
+}
+
+.product-image {
+    grid-area: image;
+}
+
+.product-image img {
+    width: 100%;
+}
+
+.product-features {
+    grid-area: features;
+}
+
