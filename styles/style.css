@@ -97,8 +97,8 @@ body {
 @media (max-width: 768px) {
     .hero {
         padding: 30px;
-        height: 200px;
-        font-size: 10px;
+        height: 400px;
+        font-size: 16px;
     }
     .article-section {
         padding: 0;
