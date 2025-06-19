@@ -45,6 +45,7 @@
     .product-image {
         display: grid;
         place-items: center;
+        margin-bottom: 2rem;
     }
 
     .product-image img {
