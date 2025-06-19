@@ -1,4 +1,5 @@
-import { createLazyFileRoute, Link } from "@tanstack/react-router";
+import { useState } from "react";
+import { createLazyFileRoute } from "@tanstack/react-router";
 import Article from "../Article";
 import aboutImage from "/img/castle.jpg";
 import { getProducts } from "../data/product";
@@ -7,7 +8,29 @@ export const Route = createLazyFileRoute("/")({
   component: Index,
 });
 
+const VISIBLE_COUNT = 4;
+
 function Index() {
+  const products = getProducts();
+  const [startIndex, setStartIndex] = useState(0);
+
+  const canScrollLeft = startIndex > 0;
+  const canScrollRight = startIndex + VISIBLE_COUNT < products.length;
+
+  const handleScrollLeft = () => {
+    if (canScrollLeft) {
+      setStartIndex(startIndex - 1);
+    }
+  };
+
+  const handleScrollRight = () => {
+    if (canScrollRight) {
+      setStartIndex(startIndex + 1);
+    }
+  };
+
+  let visibleProducts = products.slice(startIndex, startIndex + VISIBLE_COUNT);
+
   return (
     <div className="index">
       <section className="hero">
@@ -20,14 +43,32 @@ function Index() {
       </section>
 
       <section className="article-section">
-        {getProducts().map((product) => (
-          <Article
-            key={product.id}
-            fileName={product.fileName}
-            description={product.name}
-            productId={product.id}
-          />
-        ))}
+        <button
+          className="carousel-arrow left"
+          onClick={handleScrollLeft}
+          disabled={!canScrollLeft}
+        >
+          ◀
+        </button>
+
+        <div className="article-carousel">
+          {visibleProducts.map((product) => (
+            <Article
+              key={product.id}
+              fileName={product.fileName}
+              description={product.name}
+              productId={product.id}
+            />
+          ))}
+        </div>
+
+        <button
+          className="carousel-arrow right"
+          onClick={handleScrollRight}
+          disabled={!canScrollRight}
+        >
+          ▶
+        </button>
       </section>
 
       <section className="section about">

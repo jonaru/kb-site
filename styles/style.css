@@ -70,6 +70,16 @@ body {
     justify-content: center;
 }
 
+.article-carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 1;
+    flex-grow: 1;
+    transition: transform 0.3s ease;
+}
+
 .about h2 {
     margin-bottom: 1.5rem;
 }

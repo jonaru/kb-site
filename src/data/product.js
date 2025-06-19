@@ -27,6 +27,19 @@ const data = [
     description:
       "The Eden low-level WC suite reflects classic design principles consistent with the rest of Drummonds' collection. Expertly handcrafted from the finest English china, the low-level cistern serves as an elegant centrepiece — ideal for traditional bathrooms or cloakrooms. \n \n The suite includes the signature Drummonds WC pan, paired with a slim, low-level cistern and a flush handle available in either china or burnished walnut, complemented by fittings in brass, nickel, or chrome. Toilet seat and soil pipe are sold separately and can be selected from our complete range of options.",
   },
+
+  {
+    id: crypto.randomUUID(),
+    name: "The Grand Union Doubly Vanity Cabinet",
+    fileName: "grand-union.webp",
+    description:
+      "The Grand Union Double Vanity offers ample storage with six spacious drawers, topped by a distinctively carved marble surface and matching backsplash. The suite includes the cabinet, basin, and handles. Mixer taps and waste fittings are available separately. \n \n Its design blends the curved edges and stepped detailing typical of Art Deco with the sturdy, straightforward cabinetry inspired by the Arts & Crafts movement of late Edwardian Britain. The result is a piece that echoes 1920s elegance while seamlessly complementing both classic and modern interiors — combining generous proportions with carefully considered storage solutions.",
+    features: [
+      "Generous storage with six drawers",
+      "Uniquely carved marble top and backsplash",
+      "Designed by Nicola Harding",
+    ],
+  },
 ];
 
 const getProducts = () => {
