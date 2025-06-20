@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { createLazyFileRoute } from "@tanstack/react-router";
 import Article from "../Article";
 import aboutImage from "/img/castle.jpg";
@@ -8,28 +8,41 @@ export const Route = createLazyFileRoute("/")({
   component: Index,
 });
 
-const VISIBLE_COUNT = 4;
+const ITEM_WIDTH = 417;
 
 function Index() {
   const products = getProducts();
-  const [startIndex, setStartIndex] = useState(0);
+  const [startPosition, setStartPosition] = useState(0);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const containerRef = useRef();
 
-  const canScrollLeft = startIndex > 0;
-  const canScrollRight = startIndex + VISIBLE_COUNT < products.length;
+  const handleScrollRight = (scrollAmount) => {
+    const newScrollPosition = scrollPosition + scrollAmount;
 
-  const handleScrollLeft = () => {
-    if (canScrollLeft) {
-      setStartIndex(startIndex - 1);
-    }
+    setScrollPosition(newScrollPosition);
+
+    containerRef.current.scrollLeft = newScrollPosition;
+
+    setStartPosition(startPosition + 1);
   };
 
-  const handleScrollRight = () => {
-    if (canScrollRight) {
-      setStartIndex(startIndex + 1);
-    }
+  const handleScrollLeft = (scrollAmount) => {
+    const newScrollPosition = scrollPosition - scrollAmount;
+
+    setScrollPosition(newScrollPosition);
+
+    containerRef.current.scrollLeft = newScrollPosition;
+
+    setStartPosition(startPosition - 1);
   };
 
-  let visibleProducts = products.slice(startIndex, startIndex + VISIBLE_COUNT);
+  const canScrollLeft = () => {
+    return startPosition > 0;
+  };
+
+  const canScrollRight = () => {
+    return startPosition < products.length - 1;
+  };
 
   return (
     <div className="index">
@@ -44,28 +57,33 @@ function Index() {
 
       <section className="article-section">
         <button
-          className="carousel-arrow left"
-          onClick={handleScrollLeft}
-          disabled={!canScrollLeft}
+          className="slider-arrow left"
+          onClick={() => {
+            handleScrollLeft(ITEM_WIDTH);
+          }}
+          disabled={!canScrollLeft()}
         >
           ◀
         </button>
-
-        <div className="article-carousel">
-          {visibleProducts.map((product) => (
-            <Article
-              key={product.id}
-              fileName={product.fileName}
-              description={product.name}
-              productId={product.id}
-            />
-          ))}
+        <div className="slider-wrapper" ref={containerRef}>
+          <div className="article-slider">
+            {products.map((product, index) => (
+              <Article
+                key={product.id}
+                fileName={product.fileName}
+                description={product.name}
+                productId={product.id}
+              />
+            ))}
+          </div>
         </div>
 
         <button
-          className="carousel-arrow right"
-          onClick={handleScrollRight}
-          disabled={!canScrollRight}
+          className="slider-arrow right"
+          onClick={() => {
+            handleScrollRight(ITEM_WIDTH);
+          }}
+          disabled={!canScrollRight()}
         >
           ▶
         </button>

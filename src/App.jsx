@@ -6,11 +6,7 @@ import { routeTree } from "./routeTree.gen";
 const router = createRouter({ routeTree });
 
 const App = () => {
-  return (
-    <StrictMode>
-      <RouterProvider router={router} />
-    </StrictMode>
-  );
+  return <RouterProvider router={router} />;
 };
 
 const container = document.getElementById("root");
