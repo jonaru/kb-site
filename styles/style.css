@@ -74,8 +74,8 @@ body {
 .slider-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     width: 90%;
     overflow-x: scroll;
     scroll-behavior: smooth;
@@ -86,11 +86,21 @@ body {
 .article-slider {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     overflow: hidden;
     flex-shrink: 1;
     flex-grow: 1;
+    width: max-content;
+    gap: 64px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
 
+@media (max-width: 1750px) {
+    .article-slider {
+        gap: 32px;
+    }
 }
 
 .about h2 {

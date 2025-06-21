@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { createLazyFileRoute } from "@tanstack/react-router";
 import Article from "../Article";
 import aboutImage from "/img/castle.jpg";
@@ -12,9 +12,17 @@ const ITEM_WIDTH = 417;
 
 function Index() {
   const products = getProducts();
-  const [startPosition, setStartPosition] = useState(0);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [sliderWidth, setSliderWidth] = useState(0);
   const containerRef = useRef();
+
+  useEffect(() => {
+    if (containerRef.current) {
+      setSliderWidth(containerRef.current.getBoundingClientRect().width);
+      containerRef.current.scrollLeft = 0;
+      setScrollPosition(0);
+    }
+  }, []);
 
   const handleScrollRight = (scrollAmount) => {
     const newScrollPosition = scrollPosition + scrollAmount;
@@ -22,8 +30,6 @@ function Index() {
     setScrollPosition(newScrollPosition);
 
     containerRef.current.scrollLeft = newScrollPosition;
-
-    setStartPosition(startPosition + 1);
   };
 
   const handleScrollLeft = (scrollAmount) => {
@@ -32,16 +38,19 @@ function Index() {
     setScrollPosition(newScrollPosition);
 
     containerRef.current.scrollLeft = newScrollPosition;
-
-    setStartPosition(startPosition - 1);
   };
 
   const canScrollLeft = () => {
-    return startPosition > 0;
+    return scrollPosition > 0;
   };
 
   const canScrollRight = () => {
-    return startPosition < products.length - 1;
+    //return scrollPosition < sliderWidth;
+    if (!containerRef.current) return false;
+    const refCurrent = containerRef.current;
+    return (
+      scrollPosition + refCurrent.clientWidth < refCurrent.scrollWidth - 10
+    );
   };
 
   return (
