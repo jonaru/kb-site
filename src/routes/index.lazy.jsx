@@ -57,12 +57,14 @@ function Index() {
   return (
     <div className="index">
       <section className="hero">
-        <h2 className="hero-heading"></h2>
-        <p className="hero-text">
-          Upptäck vår kollektion av viktorianska och edwardianska
-          badrumsarmaturer, noggrant tillverkade enligt högsta standard av lyx
-          och elegans.
-        </p>
+        <div className="hero-image">
+          <h2 className="hero-heading"></h2>
+          <p className="hero-text">
+            Upptäck vår kollektion av viktorianska och edwardianska
+            badrumsarmaturer, noggrant tillverkade enligt högsta standard av lyx
+            och elegans.
+          </p>
+        </div>
       </section>
 
       <section className="article-section">

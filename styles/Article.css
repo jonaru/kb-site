@@ -1,7 +1,6 @@
 @import './style.css';
 
 .article-item {
-    /*margin: 0 32px 0 32px; */
     flex: 0 0 auto;
     display: flex;
     justify-content: center;

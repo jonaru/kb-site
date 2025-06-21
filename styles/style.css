@@ -37,6 +37,7 @@ body {
 }
 
 .hero {
+    /*
     padding: 120px;
     margin-bottom: 1rem;
     background-image: url("/img/taps.jpg");
@@ -49,11 +50,45 @@ body {
     align-items: center;
     color: var(--hero-text-color);
     font-size: 200%;
+    */
+    overflow: hidden;
+    height: 800px;
+    position: relative;
 }
+
+.hero-image {
+    padding: 120px;
+    background-image: url("/img/taps.jpg");
+    background-size: 100%; /* start slightly zoomed in */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    animation: zoomPan 12s ease-out forwards;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--hero-text-color);
+    font-size: 200%;
+  }
 
 .hero-text {
     text-align: center;
+    font-family: var(--font-secondary);
 }
+
+@keyframes zoomPan {
+    0% {
+      background-size: 100%;
+      background-position: center;
+    }
+    100% {
+      background-size: 125%;
+      background-position: 60% center;
+    }
+  }
 
 .section {
     padding: 3rem;
@@ -181,10 +216,6 @@ body {
         gap: 16px;
         padding-left: 8px;
         padding-right: 8px;
-    }
-
-    .slider-arrow {
-
     }
 
     .about-content {
