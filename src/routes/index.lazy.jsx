@@ -13,12 +13,12 @@ const ITEM_WIDTH = 417;
 function Index() {
   const products = getProducts();
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [sliderWidth, setSliderWidth] = useState(0);
+  const [loading, setLoading] = useState(true);
   const containerRef = useRef();
 
   useEffect(() => {
     if (containerRef.current) {
-      setSliderWidth(containerRef.current.getBoundingClientRect().width);
+      setLoading(false);
       containerRef.current.scrollLeft = 0;
       setScrollPosition(0);
     }
@@ -47,6 +47,7 @@ function Index() {
   const canScrollRight = () => {
     //return scrollPosition < sliderWidth;
     if (!containerRef.current) return false;
+
     const refCurrent = containerRef.current;
     return (
       scrollPosition + refCurrent.clientWidth < refCurrent.scrollWidth - 10
