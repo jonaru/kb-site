@@ -179,6 +179,8 @@ body {
     }
     .article-slider {
         gap: 16px;
+        padding-left: 8px;
+        padding-right: 8px;
     }
 
     .slider-arrow {
