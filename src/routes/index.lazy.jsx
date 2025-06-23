@@ -45,7 +45,6 @@ function Index() {
   };
 
   const canScrollRight = () => {
-    //return scrollPosition < sliderWidth;
     if (!containerRef.current) return false;
 
     const refCurrent = containerRef.current;

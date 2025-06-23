@@ -37,20 +37,6 @@ body {
 }
 
 .hero {
-    /*
-    padding: 120px;
-    margin-bottom: 1rem;
-    background-image: url("/img/taps.jpg");
-    height: 800px;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    color: var(--hero-text-color);
-    font-size: 200%;
-    */
     overflow: hidden;
     height: 800px;
     position: relative;
