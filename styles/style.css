@@ -200,7 +200,7 @@ body {
 }
 @media (max-width: 768px) {
     .hero {
-        height: 600px;
+        height: 200px;
     }
     .hero-image {
         padding: 30px;
