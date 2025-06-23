@@ -200,8 +200,7 @@ body {
 }
 @media (max-width: 768px) {
     .hero {
-        height: 400px;
-        font-size: 20px;
+        height: 600px;
     }
     .hero-image {
         padding: 30px;
@@ -214,6 +213,7 @@ body {
 
     .article-section {
         padding: 0;
+        margin: 0;
     }
     .article-slider {
         gap: 16px;
