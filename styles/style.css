@@ -202,11 +202,12 @@ body {
     .hero {
         height: 400px;
     }
-    .hero-image {
-        padding: 30px;
+    .hero .hero-image {
+        padding: 0 0 20px 0;
         font-size: 20px;
-        background-size: cover;
+        background-size: cover !important;
         background-position: center;
+        min-height: 400px;
     }
     .section {
         padding-left: 10px;
@@ -214,8 +215,8 @@ body {
     }
 
     .article-section {
+        margin-top: 2rem;
         padding: 0;
-        margin: 0;
     }
     .article-slider {
         gap: 16px;
