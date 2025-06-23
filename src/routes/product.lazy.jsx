@@ -31,7 +31,12 @@ function Product() {
         <img src={getImageURL(product.fileName)} alt={product.name} />
       </div>
       <div className="product-features">
-        <h3>Product Features</h3>
+        <h3>Utvalda egenskaper</h3>
+        <ul className="product-features-list">
+          {product.features.map((feature) => (
+            <li className="product-features-list-item">{feature}</li>
+          ))}
+        </ul>
       </div>
     </section>
   );
