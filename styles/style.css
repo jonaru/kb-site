@@ -200,11 +200,13 @@ body {
 }
 @media (max-width: 768px) {
     .hero {
-        height: 200px;
+        height: 400px;
     }
     .hero-image {
         padding: 30px;
         font-size: 20px;
+        background-size: cover;
+        background-position: center;
     }
     .section {
         padding-left: 10px;
