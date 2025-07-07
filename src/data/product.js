@@ -1,6 +1,15 @@
+function getNextIdFunc() {
+  let currentId = 0;
+  return function () {
+    return currentId++;
+  };
+}
+
+const getNextId = getNextIdFunc();
+
 const data = [
   {
-    id: crypto.randomUUID(),
+    id: getNextId(),
     name: "The Locky single vanity basin",
     fileName: "basin-locky.jpg",
     description:
@@ -12,7 +21,7 @@ const data = [
     ],
   },
   {
-    id: crypto.randomUUID(),
+    id: getNextId(),
     name: "The Spital free standing shower",
     fileName: "shower-spital.jpg",
     description:
@@ -26,7 +35,7 @@ const data = [
     ],
   },
   {
-    id: crypto.randomUUID(),
+    id: getNextId(),
     name: "Tay hammered copper bath tub",
     fileName: "bath-hammered-copper.jpg",
     description:
@@ -39,7 +48,7 @@ const data = [
     ],
   },
   {
-    id: crypto.randomUUID(),
+    id: getNextId(),
     name: "The Eden low level WC suite",
     fileName: "wc-low.jpg",
     description:
@@ -53,7 +62,7 @@ const data = [
   },
 
   {
-    id: crypto.randomUUID(),
+    id: getNextId(),
     name: "The Grand Union Doubly Vanity Cabinet",
     fileName: "grand-union.webp",
     description:
@@ -65,7 +74,7 @@ const data = [
     ],
   },
   {
-    id: crypto.randomUUID(),
+    id: getNextId(),
     name: "The Chessleton surface mounted shower",
     fileName: "chessleton.jpg",
     description:
