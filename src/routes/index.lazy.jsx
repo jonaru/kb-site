@@ -109,28 +109,28 @@ function Index() {
             alt="Picture of a castle"
           />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis optio
-            praesentium aperiam id doloremque consectetur est quibusdam, vitae
-            architecto harum? Quae id autem non quidem maxime ea. Aliquam labore
-            quae soluta et magnam, animi deleniti deserunt perferendis pariatur
-            odio asperiores tempore earum? Ipsa asperiores sint ratione nemo
-            deserunt officia facilis incidunt at adipisci, maxime mollitia. Ea
-            rerum libero consectetur, laborum rem omnis beatae similique impedit
-            fugiat quas recusandae nemo debitis maxime quae enim a id corporis
-            quisquam eaque? Eveniet aperiam labore at quis tenetur beatae
-            praesentium officiis vitae quaerat perferendis veritatis, iure unde
-            non modi minus quo nobis exercitationem cum eius iste. Error non
-            sint qui nostrum reiciendis sit voluptas repellendus consequatur
-            aspernatur labore. Laborum nisi totam perferendis placeat animi,
-            quis doloribus dicta optio, culpa rem deleniti architecto esse
-            reiciendis repudiandae, maiores dolore soluta vitae illo ea autem
-            sapiente? Aliquid ut dolore accusamus voluptatem, excepturi adipisci
-            cumque atque minima dolorem dicta incidunt libero molestiae unde in
-            aliquam iure natus ad eum rerum praesentium animi! Accusamus qui
-            fugit vel quas voluptatem velit, laudantium suscipit. Vel, odio.
-            Dolor, amet rem temporibus qui, explicabo a atque sed provident ab
-            debitis eveniet autem laboriosam modi? Incidunt, provident harum
-            omnis animi illum possimus eaque dolor!
+            Klassiska Bad finns till för dig som drömmer om ett badrum med
+            karaktär, kvalitet och historia. Vi är specialiserade på att
+            tillgängliggöra exklusiv brittisk badrumsinredning i klassisk stil –
+            något som tidigare varit svårt att hitta i Sverige.
+            <br />
+            <br />
+            Genom noggrant utvalda samarbeten med bland andra Drummonds, en
+            ikonisk brittisk tillverkare med rötter i traditionellt hantverk,
+            erbjuder vi badrumskomponenter i världsklass: handgjutna badkar i
+            gjutjärn, porslin av finaste kvalitet, blandare i massiv mässing och
+            mycket mer. Vår kollektion är noggrant kuraterad för att passa dig
+            som vill återskapa känslan från ett 1800-tals townhouse, en engelsk
+            herrgård eller kanske ett sekelskifteshem med tidstypiska detaljer.
+            Det handlar inte om retro – det handlar om tidlös elegans.
+            <br />
+            <br />
+            Med Klassiska Bad kan du förverkliga en vision där modern funktion
+            möter klassisk form, där materialvalen är genomtänkta och där varje
+            detalj bidrar till helheten. Vi hjälper dig skapa ett badrum som
+            känns lika naturligt i en historisk miljö som i ett samtida hem med
+            själ. Välkommen till en värld av klassiskt badrumshantverk – nu
+            tillgänglig i Sverige.
           </p>
         </div>
       </section>
