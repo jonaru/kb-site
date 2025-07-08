@@ -8,7 +8,7 @@ export const Route = createFileRoute("/products/$id")({
   loader: loader,
   pendingComponent: () => <div>Loading product...</div>,
   errorComponent: ({ error }) => (
-    <div>
+    <div style={{ textAlign: "center" }}>
       <h2>Error loading product</h2>
       <p>{error.message}</p>
     </div>
