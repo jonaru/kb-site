@@ -21,8 +21,12 @@
   "devDependencies": {
     "@tanstack/router-devtools": "^1.121.8",
     "@tanstack/router-plugin": "^1.121.9",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
     "@vitejs/plugin-react": "^4.5.2",
     "happy-dom": "^18.0.1",
+    "testing-library": "^0.0.2",
     "vite": "^6.3.5",
     "vitest": "^3.2.4"
   }
