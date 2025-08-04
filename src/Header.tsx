@@ -1,7 +1,7 @@
 import "../styles/Header.css";
 import { Link } from "@tanstack/react-router";
 
-export default function Header() {
+export default function Header() : React.ReactElement {
   return (
     <nav>
       <Link className="header-link" to="/">

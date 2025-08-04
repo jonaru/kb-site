@@ -2,14 +2,15 @@ import { render, screen, act } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom";
 import { renderWithRouter } from "./test-utils";
+import { ArticleProps } from "./Article";
 
 vi.mock("./utils/image-utils", () => ({
-  getImageURL: (fileName) => `/img/${fileName}`,
+  getImageURL: (fileName: string) => `/img/${fileName}`,
 }));
 
 describe("Article Component", () => {
   it("renders the article with image and description", async () => {
-    const props = {
+    const props : ArticleProps = {
       productId: "123",
       fileName: "test-image.jpg",
       description: "Test Article Description",
@@ -32,7 +33,7 @@ describe("Article Component", () => {
   });
 
   it("navigates to the product page on click", async () => {
-    const props = {
+    const props : ArticleProps = {
       productId: "123",
       fileName: "test-image.jpg",
       description: "Test Article Description",
@@ -47,7 +48,6 @@ describe("Article Component", () => {
       await user.click(articleLink);
     });
 
-    // Assuming you have a way to check navigation, e.g., using a mock router
     //check that product route is rendered
     expect(screen.getByText("Product Page")).toBeInTheDocument();
   });

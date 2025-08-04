@@ -7,9 +7,9 @@ import {
 } from "@tanstack/react-router";
 import React from "react";
 import { render } from "@testing-library/react";
-import Article from "./Article";
+import Article, { ArticleProps } from "./Article";
 
-export function renderWithRouter(articleProps) {
+export function renderWithRouter(articleProps : ArticleProps) {
   // Define the route component inside the function so it closes over articleProps
   function ArticleRoute() {
     return <Article {...articleProps} />;
@@ -35,7 +35,7 @@ export function renderWithRouter(articleProps) {
 
   const router = createRouter({
     routeTree,
-    initialEntries: [{ pathname: "/" }],
+    // initialEntries: [{ pathname: "/" }],
   });
 
   return render(<RouterProvider router={router} />);

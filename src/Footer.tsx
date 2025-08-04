@@ -1,6 +1,6 @@
 import "../styles/Footer.css";
 
-export default function Footer() {
+export default function Footer() : React.ReactElement {
   return (
     <div className="footer">
       <ul>

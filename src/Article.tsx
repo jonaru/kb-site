@@ -2,7 +2,13 @@ import "../styles/Article.css";
 import { Link } from "@tanstack/react-router";
 import { getImageURL } from "./utils/image-utils";
 
-export default function Article(props) {
+type ArticleProps = {
+  productId: string;
+  fileName: string;
+  description: string;
+};
+
+export default function Article(props : ArticleProps) : React.ReactElement {
   return (
     <div className="article-item">
       <Link to="/products/$id" params={{ id: props.productId }}>
@@ -14,3 +20,5 @@ export default function Article(props) {
     </div>
   );
 }
+
+export type { ArticleProps };

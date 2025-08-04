@@ -1,6 +1,6 @@
 import "../styles/NotFound.css";
 
-export default function NotFound() {
+export default function NotFound() : React.ReactElement {
   return (
     <div className="not-found">
       <h1>404 - Page Not Found</h1>
