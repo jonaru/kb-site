@@ -7,7 +7,7 @@ function getNextIdFunc() : () => number {
 
 const getNextId : () => number = getNextIdFunc();
 
-type Product = {
+type ProductData = {
   id: number;
   name: string;
   fileName: string;
@@ -15,9 +15,9 @@ type Product = {
   features: string[];
 };
 
-export type { Product };
+export type { ProductData };
 
-const data: Product[] = [
+const data: ProductData[] = [
   {
     id: getNextId(),
     name: "The Locky single vanity basin",
@@ -98,7 +98,7 @@ const data: Product[] = [
   },
 ];
 
-const getProducts = () : Product[] => {
+const getProducts = () : ProductData[] => {
   return data;
 };
 

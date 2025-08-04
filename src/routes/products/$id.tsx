@@ -1,6 +1,7 @@
 import "../../../styles/product.css";
 import { createFileRoute, useLoaderData } from "@tanstack/react-router";
 import { getImageURL } from "../../utils/image-utils";
+import type { ProductData } from "../../data/product";
 import { getProducts } from "../../data/product";
 
 export const Route = createFileRoute("/products/$id")({
@@ -15,9 +16,9 @@ export const Route = createFileRoute("/products/$id")({
   ),
 });
 
-async function loader({ params }) {
+async function loader({ params }: { params: { id: string } }) {
   const { id } = params;
-  const products = getProducts();
+  const products : ProductData[] = getProducts();
   const product = products.find((item) => item.id === Number(id));
 
   if (!product) {
@@ -27,8 +28,8 @@ async function loader({ params }) {
   return { product };
 }
 
-function Product() {
-  const { product } = useLoaderData({ from: "/products/$id" });
+function Product() : React.ReactElement {
+  const { product } : { product: ProductData } = useLoaderData({ from: "/products/$id" });
 
   if (!product) {
     return <div>Product not found.</div>;

@@ -1,20 +1,20 @@
 import { useState, useRef, useEffect } from "react";
 import { createLazyFileRoute } from "@tanstack/react-router";
 import Article from "../Article";
-import aboutImage from "/img/castle.jpg";
+import aboutImage from "../../img/castle.jpg";
 import { getProducts } from "../data/product";
 
 export const Route = createLazyFileRoute("/")({
   component: Index,
 });
 
-const ITEM_WIDTH = 417;
+const ITEM_WIDTH : number = 417;
 
-function Index() {
+function Index() : React.ReactElement {
   const products = getProducts();
   const [scrollPosition, setScrollPosition] = useState(0);
   const [loading, setLoading] = useState(true);
-  const containerRef = useRef();
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (containerRef.current) {
@@ -24,19 +24,19 @@ function Index() {
     }
   }, []);
 
-  const handleScrollRight = (scrollAmount) => {
+  const handleScrollRight = (scrollAmount: number) => {
+    if (!containerRef.current) return;
+
     const newScrollPosition = scrollPosition + scrollAmount;
-
     setScrollPosition(newScrollPosition);
-
     containerRef.current.scrollLeft = newScrollPosition;
   };
 
-  const handleScrollLeft = (scrollAmount) => {
+  const handleScrollLeft = (scrollAmount: number) => {
+    if (!containerRef.current) return;
+
     const newScrollPosition = scrollPosition - scrollAmount;
-
     setScrollPosition(newScrollPosition);
-
     containerRef.current.scrollLeft = newScrollPosition;
   };
 
@@ -83,7 +83,7 @@ function Index() {
                 key={product.id}
                 fileName={product.fileName}
                 description={product.name}
-                productId={product.id}
+                productId={product.id.toString()}
               />
             ))}
           </div>
