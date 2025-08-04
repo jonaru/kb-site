@@ -1,13 +1,23 @@
-function getNextIdFunc() {
+function getNextIdFunc() : () => number {
   let currentId = 0;
   return function () {
     return currentId++;
   };
 }
 
-const getNextId = getNextIdFunc();
+const getNextId : () => number = getNextIdFunc();
 
-const data = [
+type Product = {
+  id: number;
+  name: string;
+  fileName: string;
+  description: string;
+  features: string[];
+};
+
+export type { Product };
+
+const data: Product[] = [
   {
     id: getNextId(),
     name: "The Locky single vanity basin",
@@ -88,7 +98,7 @@ const data = [
   },
 ];
 
-const getProducts = () => {
+const getProducts = () : Product[] => {
   return data;
 };
 
